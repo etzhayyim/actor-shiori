@@ -4,5 +4,7 @@
  :graph-type "com.etzhayyim.shiori.graph"
  :published  "2026-06-28"
  :bundle [["data" "data"]
+          ["schema" "schema"]
+          ["manifest.edn" "manifest.edn"]
           [".well-known/did.json" "did.json"]
           ["README.md" "README.md"]]}

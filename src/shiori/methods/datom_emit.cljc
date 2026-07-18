@@ -157,7 +157,7 @@
      "CLI entry: analyze a seed EDN graph → out/wellbecoming-datoms.kotoba.edn (file I/O at the edge)."
      [& argv]
      (let [argv (vec argv)
-           here (-> *file* io/file .getParentFile .getParentFile)
+           here (io/file ".")
            seed (if (and (seq argv) (not (str/starts-with? (first argv) "--")))
                   (io/file (first argv))
                   (io/file here "data" "seed-wellbecoming-graph.kotoba.edn"))

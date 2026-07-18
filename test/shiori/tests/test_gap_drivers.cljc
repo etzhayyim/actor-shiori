@@ -1,6 +1,6 @@
 #!/usr/bin/env bb
 ;; shiori 栞 — tests for gap-drivers (the detractors whose harm lands on the under-served).
-;; Run:  bb --classpath 20-actors 20-actors/shiori/tests/test_gap_drivers.cljc
+;; Run:  bb --classpath  tests/test_gap_drivers.cljc
 (ns shiori.tests.test-gap-drivers
   "Tests for gap-drivers — each structural detractor's :diminishes harm WEIGHTED by the relief-gap of
   the cohort it lands on, so a detractor that harms an under-served cohort outranks one whose targets

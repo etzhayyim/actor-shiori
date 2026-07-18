@@ -1,6 +1,6 @@
 #!/usr/bin/env bb
 ;; shiori 栞 — wellbecoming-ledger persistence + heartbeat tests.
-;; Run:  bb --classpath 20-actors 20-actors/shiori/tests/test_kotoba.cljc
+;; Run:  bb --classpath  tests/test_kotoba.cljc
 (ns shiori.tests.test-kotoba
   (:require [shiori.methods.kotoba :as k]
             [shiori.methods.autorun :as auto]

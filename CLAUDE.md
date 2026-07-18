@@ -91,9 +91,9 @@ Care actors; the act of transparency belongs to the accountability mirrors.
 ## Layout
 
 ```
-20-actors/shiori/
+com-etzhayyim-shiori/
 ├── CLAUDE.md                              # this file
-├── manifest.jsonld                        # actor manifest (3 cells, 8 gates)
+├── manifest.edn                        # actor manifest (3 cells, 8 gates)
 ├── data/
 │   └── seed-wellbecoming-graph.kotoba.edn # structural detractors + AGGREGATE cohorts + 縁
 ├── methods/                               # pure-stdlib (no numpy) → kotoba pywasm-runnable
@@ -115,9 +115,9 @@ Care actors; the act of transparency belongs to the accountability mirrors.
 
 ```bash
 cd 20-actors/shiori
-python3 methods/analyze.py          # → out/relief-gap-report.md
-python3 methods/datom_emit.py       # → out/wellbecoming-datoms.kotoba.edn (EAVT)
-python3 methods/coverage_report.py  # → out/coverage-report.md
+python3 src/shiori/methods/analyze.cljc          # → out/relief-gap-report.md
+python3 src/shiori/methods/datom_emit.cljc       # → out/wellbecoming-datoms.kotoba.edn (EAVT)
+python3 src/shiori/methods/coverage_report.cljc  # → out/coverage-report.md
 python3 tests/test_analyze.py && python3 tests/test_coverage.py   # 11 green
 ```
 

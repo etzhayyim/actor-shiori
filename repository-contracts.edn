@@ -1,0 +1,5 @@
+{:canonical :edn
+ :required ["actor.edn" "identity.edn" "manifest.edn" "kotoba.app.edn"
+            "dependencies.edn" "data/seed-wellbecoming-graph.kotoba.edn"]
+ :forbidden-extensions [".go" ".sh" ".wasm" ".jsonld" ".bpmn"]
+ :forbidden-files ["go.mod" "go.sum"]}

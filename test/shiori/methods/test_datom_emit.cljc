@@ -10,10 +10,7 @@
             [shiori.methods.analyze :as analyze]
             [shiori.methods.datom-emit :as datom-emit]))
 
-(def seed
-  (-> (clojure.java.io/file *file*) .getParentFile .getParentFile
-      (clojure.java.io/file "data" "seed-wellbecoming-graph.kotoba.edn")
-      str))
+(def seed (str (clojure.java.io/file "data" "seed-wellbecoming-graph.kotoba.edn")))
 
 (deftest test-datom-emit-ground-and-transient
   (let [{:keys [nodes edges]} (datom-emit/load-file* seed)

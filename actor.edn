@@ -1,4 +1,4 @@
-{:did        "did:web:etzhayyim.github.io:com-etzhayyim-shiori"
+{:did        "did:web:etzhayyim.com:actor:shiori"
  :handle     "shiori.etzhayyim.com"
  :ipns-key   "shiori-actor"
  :graph-type "com.etzhayyim.shiori.graph"

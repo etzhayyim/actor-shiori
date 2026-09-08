@@ -1,5 +1,5 @@
 (require '[clojure.edn :as edn] '[clojure.java.io :as io]
-         '[clojure.string :as str] '[clojure.test :as t]
+         '[kotoba.lang.text :as str] '[clojure.test :as t]
          'shiori.murakumo-test 'shiori.methods.test-datom-emit
          'shiori.tests.test-analyze 'shiori.tests.test-coverage
          'shiori.tests.test-gap-drivers 'shiori.tests.test-kotoba)

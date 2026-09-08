@@ -7,7 +7,7 @@
   Coverage of all cohorts/detractors is ~0 by design (a bounded :representative, AGGREGATE seed).
 
   Pure fns; reuses shiori.methods.analyze for the loader. Portable .cljc."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [shiori.methods.analyze :as analyze]))
 
 ;; honest external denominators (public wellbeing-research scale context)

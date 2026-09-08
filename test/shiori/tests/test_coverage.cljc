@@ -1,7 +1,7 @@
 (ns shiori.tests.test-coverage
   "shiori 栞 — coverage-report tests (ADR-2606082100). 1:1 Clojure port of tests/test_coverage.py."
   (:require [clojure.test :refer [deftest is run-tests]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.set]
             [clojure.java.io :as io]
             [shiori.methods.analyze :as analyze]

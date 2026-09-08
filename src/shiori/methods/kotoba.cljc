@@ -22,7 +22,7 @@
   appends to a local file. G1: the ledger is a RELIEF map at COHORT-AGGREGATE scale,
   NEVER per-person affect / manipulation; drivers are PATTERNS, not entities
   (anti-addictive; intervention is TRANSPARENT + consent-bound, carried by ossekai)."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             #?(:clj [clojure.java.io :as io])))
 
 (defn add [entity attr value] [":db/add" entity attr value])

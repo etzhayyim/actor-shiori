@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; shiori 栞 — autonomous heartbeat: load the wellbecoming graph → append GROUND datoms.
 (ns shiori.methods.autorun
   "autorun.cljc — shiori 栞 deterministic heartbeat (ADR-2606082102, inochi/tsugite pattern).

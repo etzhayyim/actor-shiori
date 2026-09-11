@@ -11,4 +11,4 @@ relief routes; it cannot create individual mood or affect profiles, diagnose or
 rank a person, blame a named target, or deliver a covert intervention. Live
 ingest and routing remain consent-, Council-, and operator-gated.
 
-Run the standalone suite with `bb test`.
+Run the standalone suite with `kbb -M:test`.

@@ -115,9 +115,9 @@ com-etzhayyim-shiori/
 
 ```bash
 cd 20-actors/shiori
-python3 src/shiori/methods/analyze.cljc          # → out/relief-gap-report.md
-python3 src/shiori/methods/datom_emit.cljc       # → out/wellbecoming-datoms.kotoba.edn (EAVT)
-python3 src/shiori/methods/coverage_report.cljc  # → out/coverage-report.md
+python3 src/shiori/methods/analyze.cljk          # → out/relief-gap-report.md
+python3 src/shiori/methods/datom_emit.cljk       # → out/wellbecoming-datoms.kotoba.edn (EAVT)
+python3 src/shiori/methods/coverage_report.cljk  # → out/coverage-report.md
 python3 tests/test_analyze.py && python3 tests/test_coverage.py   # 11 green
 ```
 

@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; shiori 栞 — human-Wellbecoming graph DATOM-LOG writer (content-addressed commit-DAG).
 (ns shiori.methods.kotoba
   "kotoba.cljc — shiori 栞 append-only WELLBECOMING LEDGER writer

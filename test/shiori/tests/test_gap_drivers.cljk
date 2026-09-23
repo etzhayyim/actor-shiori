@@ -7,7 +7,7 @@
   are already well-served. Cohort-aggregate; the ranked 取-holder is a structural pattern, never a
   person (G1)."
   (:require [shiori.methods.analyze :as a]
-            [clojure.test :refer [deftest is run-tests]]))
+            [kotoba.test :refer [deftest is run-tests]]))
 
 (def ^:private nodes
   {"d1" {":organism/label" "Precarity"} "d2" {":organism/label" "Overwork"}

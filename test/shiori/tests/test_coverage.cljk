@@ -2,7 +2,7 @@
   "shiori 栞 — coverage-report tests (ADR-2606082100). 1:1 Clojure port of tests/test_coverage.py."
   (:require [kotoba.test :refer [deftest is run-tests]]
             [kotoba.lang.text :as str]
-            [clojure.set]
+            [kotoba.lang.coll]
             [kotoba.io :as io]
             [shiori.methods.analyze :as analyze]
             [shiori.methods.coverage-report :as coverage]))
@@ -27,7 +27,7 @@
         detrs (filter #(= ":detractor" (get % ":organism/kind")) (vals nodes))
         sevs (set (map #(get % ":detractor/severity") detrs))
         kinds (set (map #(get % ":organism/kind") (vals nodes)))]
-    (is (clojure.set/subset? #{":critical" ":severe" ":moderate"} sevs)
+    (is (kotoba.lang.coll/subset? #{":critical" ":severe" ":moderate"} sevs)
         (str "thin severity spine: " sevs))
     (is (contains? kinds ":mitigator") "no relief side (the 守り) in the seed")
     (is (contains? kinds ":driver") "no structural-driver side in the seed")))

@@ -22,7 +22,7 @@
   (:require [kotoba.test :refer [deftest is testing run-tests]]
             [kotoba.lang.text :as str]
             [clojure.set]
-            [clojure.java.io :as io]
+            [kotoba.io :as io]
             [shiori.methods.analyze :as analyze]))
 
 (def actor-dir (io/file "."))

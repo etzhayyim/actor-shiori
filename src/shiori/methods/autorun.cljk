@@ -17,7 +17,7 @@
   (:require [kotoba.lang.text :as str]
             [shiori.methods.datom-emit :as de]
             [shiori.methods.kotoba :as k]
-            #?(:clj [clojure.java.io :as io])))
+            #?(:clj [kotoba.io :as io])))
 
 (defn- node-order [nodes]
   ;; load-file* attaches :shiori.methods.datom-emit/node-order; fall back to (keys nodes)

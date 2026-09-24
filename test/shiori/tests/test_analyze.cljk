@@ -21,7 +21,7 @@
   ported 1:1."
   (:require [kotoba.test :refer [deftest is testing run-tests]]
             [kotoba.lang.text :as str]
-            [clojure.set]
+            [kotoba.lang.coll]
             [kotoba.io :as io]
             [shiori.methods.analyze :as analyze]))
 
@@ -35,7 +35,7 @@
     (is (>= (count nodes) 30) (str "expected a real seed, got " (count nodes) " nodes"))
     (is (>= (count edges) 30) (str "expected a real 縁 web, got " (count edges) " edges"))
     (let [kinds (set (map #(get % ":organism/kind") (vals nodes)))]
-      (is (clojure.set/subset? #{":cohort" ":detractor" ":driver" ":mitigator"} kinds)
+      (is (kotoba.lang.coll/subset? #{":cohort" ":detractor" ":driver" ":mitigator"} kinds)
           (str "missing core kinds: " kinds)))
     (doseq [e edges]
       (is (contains? nodes (get e ":en/from")) (str "dangling from: " (get e ":en/from")))
@@ -96,7 +96,7 @@
                                     :when (and (= ":diminishes" (get e ":en/kind"))
                                                (= top (get e ":en/to")))]
                                 (get-in nodes [(get e ":en/from") ":detractor/severity"])))]
-        (is (seq (clojure.set/intersection incident-sev #{":critical" ":severe"}))
+        (is (seq (kotoba.lang.coll/intersection incident-sev #{":critical" ":severe"}))
             (str "top relief-gap cohort " top " bears no critical/severe detractor — lens mis-weighted"))))))
 
 (deftest test-imposed-driver-is-structural-pattern-not-entity

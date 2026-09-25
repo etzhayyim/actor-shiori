@@ -23,7 +23,7 @@
   NEVER per-person affect / manipulation; drivers are PATTERNS, not entities
   (anti-addictive; intervention is TRANSPARENT + consent-bound, carried by ossekai)."
   (:require [kotoba.bytes :as kbytes] [kotoba.lang.text :as str]
-            #?(:clj [clojure.java.io :as io])))
+            #?(:clj [kotoba.io :as io])))
 
 (defn add [entity attr value] [":db/add" entity attr value])
 
@@ -130,8 +130,8 @@
    (do
      (defn append-tx [tx log-path]
        (let [f (io/file log-path)]
-         (when-let [p (.getParentFile f)] (.mkdirs p))
-         (when-not (.exists f)
+         (when-let [p (io/parent-file f)] (io/mkdirs p))
+         (when-not (io/exists? f)
            (spit f (str ";; shiori 栞 — WELLBECOMING LEDGER (append-only, content-addressed EAVT "
                         "commit-DAG of the cohort/detractor/driver/mitigator graph). Generated; DO NOT "
                         "hand-edit. A RELIEF map at COHORT-AGGREGATE scale, never per-person affect. "
@@ -141,7 +141,7 @@
 
      (defn read-log [log-path]
        (let [f (io/file log-path)]
-         (if-not (.exists f) []
+         (if-not (io/exists? f) []
                  (->> (str/split-lines (slurp f))
                       (map str/trim)
                       (remove #(or (empty? %) (str/starts-with? % ";")))
